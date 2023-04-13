@@ -80,7 +80,7 @@ const initialHistoryList = [
 ]
 class History extends Component {
     state={
-        searchInput='',
+        searchInput: '',
         isShow:false,
         HistoryList:initialHistoryList,
     }
@@ -107,21 +107,23 @@ class History extends Component {
         }
     }
     render(){
+        
         const {searchInput,HistoryList,isShow}=this.state 
 
         const searchResults=HistoryList.filter(each => 
             each.title.toLowerCase().includes(searchInput.toLowerCase()),
             )
             return(
+                
                 <div className="header-container">
-                    <img src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png" alt="app logo"className="logo"
+                    <img src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png" alt="app logo" className="logo"
 
                     />
                     <div className="input-container">
                         <img src="https://assets.ccbp.in/frontend/react-js/search-img.png" alt="search" className="search-icon"
 
                         />
-                        <input type="search" className="search-input"placeholder="search history"
+                        <input type="search" className="search-input" placeholder="search history"
                         onChange={this.onChangeSearchInput}
                         value={searchInput}
                         />
@@ -142,8 +144,9 @@ class History extends Component {
                             ))
                         )}
                     </ul>
-                </div>  
+                </div>
             )
     }
 }
+
 export default History 

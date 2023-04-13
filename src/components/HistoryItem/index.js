@@ -1,4 +1,5 @@
 import './index.css'
+
 const HistoryItem = props => {
   const {historyDetails, deleteHistory} = props
   const {id, timeAccessed, logoUrl, title, domainUrl} = historyDetails
